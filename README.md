@@ -23,6 +23,7 @@ Basic assumptions:
 1. All coordinates are in Euclidian space.
 2. Pick up and drop off are assumed in the floors to visit.
 3. The time constant is hard coded (could have uses and init file but that was a lot of work for a simple program).
+4. Floors zero (0) and below (negative numbers) are sub-floors.
 
 Implementation specific details of each elevator is in the description. 
 
