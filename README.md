@@ -8,7 +8,7 @@ This project was kept very simple by design. I wanted to minimize dependencies a
 For example, this project could have used an argument parsing lib to simplify the `main` function which would violate 
 the minimize dependencies rule.
 
-*Note*: This code comes with no warranty whatsoever! So, run at your own risk. There is licencing on this you are free 
+*Note*: This code comes with no warranty whatsoever! So, run at your own risk. There is licensing on this you are free 
 to use as you see fit. 
 
 ## Requirements
@@ -19,7 +19,11 @@ generate the following outputs.
 - Program Constants: Single floor travel time: 10
 
 ## Assumptions
-Each specific implementation of the elevator has a description of what it does and any assumptions made. 
+Basic assumptions:
+1. All coordinates are in Euclidian space.
+2. Pick up and drop off are assumed in the floors to visit.
+
+Implementation specific details of each elevator is in the description. 
 
 ## How to Run
 How to build in the project directory `oa-elevator` run `mvn clean install`. 
