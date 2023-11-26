@@ -8,7 +8,7 @@ This project was kept very simple by design. I wanted to minimize dependencies a
 For example, this project could have used an argument parsing lib to simplify the `main` function which would violate 
 the minimize dependencies rule.
 
-*Note*: This code comes with no warranty whatsoever! So, run at your own risk. There is licensing on this you are free 
+*Note*: This code comes with no warranty whatsoever! So, run at your own risk. There is no licensing on this project you are free 
 to use as you see fit. 
 
 ## Requirements
@@ -22,6 +22,7 @@ generate the following outputs.
 Basic assumptions:
 1. All coordinates are in Euclidian space.
 2. Pick up and drop off are assumed in the floors to visit.
+3. The time constant is hard coded (could have uses and init file but that was a lot of work for a simple program).
 
 Implementation specific details of each elevator is in the description. 
 
