@@ -28,7 +28,8 @@ Basic assumptions:
 Implementation specific details of each elevator is in the description. 
 
 ## How to Run
-How to build in the project directory `oa-elevator` run `mvn clean install`. 
+How to build - in the project directory `oa-elevator` run `mvn clean install`. This assumes you have a JDK 8 or higher, have maven 
+installed and clone the project without modifications. 
 ### Using Java 
 For the project directory run the following for the simple elevator:
 ```bash
@@ -45,7 +46,8 @@ java -jar ./target/oa-elevator-1.0-SNAPSHOT-jar-with-dependencies.jar w startflo
 ### Using the Script
 Move to the `script` folder in project directory and make sure the `oa-elevator.sh` has executable permissions if it 
 does not then add it using `chmod +x oa-elevator.sh`. The script assumes that the `oa-elevator.jar` file is located in 
-same directory as the script.
+same directory as the script. The jar in this directry was built with java 17, so you will need java 17 or higher to run
+the jar. 
 
 Run the following for the simple elevator:
 ```bash
