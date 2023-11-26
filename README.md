@@ -4,6 +4,10 @@ An elevator simulator for OA.
 It has three elevators to choose from `Simple`, `Time Optimal` and `Willy Wonka`. I hope you enjoy the simulation. 
 Instructions for how to build and run the simulations are below.  
 
+This project was kept very simple by design. I wanted to minimize dependencies and keep the jar as small as possible.
+For example, this project could have used an argument parsing lib to simplify the `main` function which would violate 
+the minimize dependencies rule.
+
 *Note*: This code comes with no warranty whatsoever! So, run at your own risk. There is licencing on this you are free 
 to use as you see fit. 
 
