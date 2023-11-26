@@ -6,7 +6,7 @@ import kotlin.math.abs
  * A simple elevator that will go to each floor in the order they were provided.
  * @param timeBetweenFloors the time it takes to move between a single floor
  */
-class SimpleElevator(private val timeBetweenFloors: Int): Elevator<Int> {
+class SimpleElevator(private val timeBetweenFloors: Int) : Elevator<Int> {
 
     /**
      * @see Elevator

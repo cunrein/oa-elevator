@@ -7,7 +7,7 @@ import kotlin.math.abs
  * is just one step, so it will be at worst case two (2) time the optimal travel time that could be improved by
  * investigating more steps.
  */
-class TimeOptimalElevator(private val timeBetweenFloors: Int): Elevator<Int> {
+class TimeOptimalElevator(private val timeBetweenFloors: Int) : Elevator<Int> {
 
     /**
      * This could probably use some work to make it better.
@@ -19,19 +19,19 @@ class TimeOptimalElevator(private val timeBetweenFloors: Int): Elevator<Int> {
         val floors = mutableListOf(startFloor)
         val ftv = floorsToVisit.toMutableList()
 
-        while (ftv.size > 0){
+        while (ftv.size > 0) {
             var closestDist = Int.MAX_VALUE
             var closestFloor = Int.MIN_VALUE
             var closestIndex = -1
             ftv.forEachIndexed { i, f ->
                 val dist = abs(f - from)
-                if(closestDist > dist) {
+                if (closestDist > dist) {
                     closestDist = dist
                     closestFloor = f
                     closestIndex = i
                 }
             }
-            if(closestIndex != -1) {
+            if (closestIndex != -1) {
                 ftv.removeAt(closestIndex)
                 totalTime += closestDist * timeBetweenFloors
                 from = closestFloor

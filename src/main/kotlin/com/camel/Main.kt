@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
             oa-elevator [optional: o] startfloor=10 floors=1,2,3,4,5
             oa-elevator w startfloor=1,2 floors=(1,2),(3,4),(5,6)
         """.trimIndent()
-    if(args.size < 2 || args.size > 3) {
+    if (args.size < 2 || args.size > 3) {
         println(usage)
         return
     }
@@ -18,16 +18,16 @@ fun main(args: Array<String>) {
     var start = "1"
     var floors = ""
     args.forEach {
-        if(it.lowercase(Locale.getDefault()) == "o") {
+        if (it.lowercase(Locale.getDefault()) == "o") {
             elevatorChoice = 2
         }
-        if(it.lowercase(Locale.getDefault()) == "w") {
+        if (it.lowercase(Locale.getDefault()) == "w") {
             elevatorChoice = 3
         }
-        if(it.startsWith("startfloor=", true)) {
+        if (it.startsWith("startfloor=", true)) {
             start = it.split("=")[1]
         }
-        if(it.startsWith("floors=", true)) {
+        if (it.startsWith("floors=", true)) {
             floors = it.split("=")[1]
         }
     }
@@ -35,7 +35,7 @@ fun main(args: Array<String>) {
     val split = start.split(",")
     var sw = Pair(1, 1)
     var s = 1
-    if(split.size > 1) {
+    if (split.size > 1) {
         sw = Pair(split[0].toInt(), split[1].toInt())
     } else {
         s = split[0].toInt()
@@ -51,8 +51,8 @@ fun main(args: Array<String>) {
         }
         println(elevator.run(sw, floorsAndDoors))
     } else {
-        val elevator = if(elevatorChoice == 1) SimpleElevator(timeBetweenFloors)
-                       else TimeOptimalElevator(timeBetweenFloors)
+        val elevator = if (elevatorChoice == 1) SimpleElevator(timeBetweenFloors)
+        else TimeOptimalElevator(timeBetweenFloors)
         val floorsToVisit = floors.split(",").map { it.toInt() }.toList()
         println(elevator.run(s, floorsToVisit))
     }
