@@ -31,7 +31,7 @@
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
-                <version>1.9.21</version>
+                <version>1.9.20</version>
                 <executions>
                     <execution>
                         <id>compile</id>
@@ -96,13 +96,13 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test-junit5</artifactId>
-            <version>1.9.21</version>
+            <version>1.9.20</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
-            <version>1.9.21</version>
+            <version>1.9.20</version>
         </dependency>
     </dependencies>
 
