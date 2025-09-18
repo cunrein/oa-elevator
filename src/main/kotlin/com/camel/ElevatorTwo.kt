@@ -12,7 +12,7 @@ class ElevatorTwo<T>(private val timeBetween: Int, private val fn: ElevatorRun<T
     }
 }
 
-val simpleRun = {
+val simpleRun: ElevatorRun<Int> = {
     timeBetweenFloors: Int, startFloor: Int, floorsToVisit: List<Int> ->
         var totalTime = 0
         var from = startFloor
@@ -25,7 +25,7 @@ val simpleRun = {
         Pair(totalTime, floors.toList())
 }
 
-val timeOptimalRun = {
+val timeOptimalRun: ElevatorRun<Int> = {
     timeBetweenFloors: Int, startFloor: Int, floorsToVisit: List<Int> ->
         var totalTime = 0
         var from = startFloor
@@ -57,7 +57,7 @@ val timeOptimalRun = {
         Pair(totalTime, floors.toList())
 }
 
-val wonkaRun = {
+val wonkaRun: ElevatorRun<Pair<Int, Int>> = {
     timeBetweenDoors: Int, startFloor: Pair<Int, Int>, doorsToVisit: List<Pair<Int, Int>> ->
         var totalTime = 0.0
         var from = startFloor

@@ -55,7 +55,7 @@ Run the following for the simple elevator:
 ```
 for the time optimal'ish elevator:
 ```bash
-./oa-elevator  o startfloor=12 floors=2,9,1,32
+./oa-elevator o startfloor=12 floors=2,9,1,32
 ```
 for the Willy Wonka elevator:
 ```bash
