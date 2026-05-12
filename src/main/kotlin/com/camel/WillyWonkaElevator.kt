@@ -22,7 +22,7 @@ class WillyWonkaElevator(private val timeBetweenDoors: Int) : Elevator<Pair<Int,
         val doors = mutableListOf(startFloor)
         val dtv = floorsToVisit.toMutableList()
 
-        while (dtv.size > 0) {
+        while (dtv.isNotEmpty()) {
             var closestDist = Double.MAX_VALUE
             var closestDoor = Pair(Int.MIN_VALUE, Int.MIN_VALUE)
             var closestIndex = -1

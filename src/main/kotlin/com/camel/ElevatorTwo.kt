@@ -32,7 +32,7 @@ val timeOptimalRun: ElevatorRun<Int> = {
         val floors = mutableListOf(startFloor)
         val ftv = floorsToVisit.toMutableList()
 
-        while (ftv.size > 0) {
+        while (ftv.isNotEmpty()) {
             var closestDist = Int.MAX_VALUE
             var closestFloor = Int.MIN_VALUE
             var closestIndex = -1
@@ -64,7 +64,7 @@ val wonkaRun: ElevatorRun<Pair<Int, Int>> = {
         val doors = mutableListOf(startFloor)
         val dtv = doorsToVisit.toMutableList()
 
-        while (dtv.size > 0) {
+        while (dtv.isNotEmpty()) {
             var closestDist = Double.MAX_VALUE
             var closestDoor = Pair(Int.MIN_VALUE, Int.MIN_VALUE)
             var closestIndex = -1

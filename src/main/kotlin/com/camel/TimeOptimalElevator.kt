@@ -3,8 +3,8 @@ package com.camel
 import kotlin.math.abs
 
 /**
- * This is a time optimal'ish elevator. It uses a greedy algorithm to move to the closest floor. the greedy method used
- * is just one step, so it will be at worst case two (2) time the optimal travel time that could be improved by
+ * This is a time optimal'ish elevator. It uses a greedy algorithm to move to the closest floor. The greedy method used
+ * is just one step, so it will be at the worst case two (2) time the optimal travel time that could be improved by
  * investigating more steps.
  */
 class TimeOptimalElevator(private val timeBetweenFloors: Int) : Elevator<Int> {
@@ -19,7 +19,7 @@ class TimeOptimalElevator(private val timeBetweenFloors: Int) : Elevator<Int> {
         val floors = mutableListOf(startFloor)
         val ftv = floorsToVisit.toMutableList()
 
-        while (ftv.size > 0) {
+        while (ftv.isNotEmpty()) {
             var closestDist = Int.MAX_VALUE
             var closestFloor = Int.MIN_VALUE
             var closestIndex = -1
